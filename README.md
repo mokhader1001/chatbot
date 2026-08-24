@@ -8,31 +8,31 @@ A full-stack chatbot built with React and Node.js, powered by the Gemini API. It
 
 ### Server Libraries
 
-| Library | Version | Description |
-|---------|---------|-------------|
-| `express` | 5.2.1 | Web framework for building the REST API |
-| `@google/genai` | 2.18.0 | Google Gemini AI SDK for generating chat responses |
-| `cors` | 2.8.6 | Enables Cross-Origin requests between client and server |
-| `dotenv` | 17.4.2 | Loads environment variables from `.env` file |
-| `nodemon` | 3.1.14 | (dev) Auto-restarts server on file changes |
+| Library | Version | Install Command | Description |
+|---------|---------|-----------------|-------------|
+| `express` | 5.2.1 | `npm install express` | Web framework for building the REST API |
+| `@google/genai` | 2.18.0 | `npm install @google/genai` | Google Gemini AI SDK for generating chat responses |
+| `cors` | 2.8.6 | `npm install cors` | Enables Cross-Origin requests between client and server |
+| `dotenv` | 17.4.2 | `npm install dotenv` | Loads environment variables from `.env` file |
+| `nodemon` | 3.1.14 | `npm install --save-dev nodemon` | (dev) Auto-restarts server on file changes |
 
 ### Client Libraries
 
-| Library | Version | Description |
-|---------|---------|-------------|
-| `react` | 19.2.8 | UI library for building the chat interface |
-| `react-dom` | 19.2.8 | React rendering for the browser |
-| `vite` | 8.2.0 | (dev) Fast build tool and dev server |
-| `@vitejs/plugin-react` | 6.0.4 | (dev) React support for Vite |
-| `eslint` | 10.8.0 | (dev) Code linting |
-| `eslint-plugin-react-hooks` | 7.1.1 | (dev) Linting rules for React hooks |
-| `eslint-plugin-react-refresh` | 0.5.3 | (dev) Linting rules for React Fast Refresh |
+| Library | Version | Install Command | Description |
+|---------|---------|-----------------|-------------|
+| `react` | 19.2.8 | `npm install react` | UI library for building the chat interface |
+| `react-dom` | 19.2.8 | `npm install react-dom` | React rendering for the browser |
+| `vite` | 8.2.0 | `npm install --save-dev vite` | (dev) Fast build tool and dev server |
+| `@vitejs/plugin-react` | 6.0.4 | `npm install --save-dev @vitejs/plugin-react` | (dev) React support for Vite |
+| `eslint` | 10.8.0 | `npm install --save-dev eslint` | (dev) Code linting |
+| `eslint-plugin-react-hooks` | 7.1.1 | `npm install --save-dev eslint-plugin-react-hooks` | (dev) Linting rules for React hooks |
+| `eslint-plugin-react-refresh` | 0.5.3 | `npm install --save-dev eslint-plugin-react-refresh` | (dev) Linting rules for React Fast Refresh |
 
 ### CDN (loaded via `index.html`)
 
-| Library | Version | Description |
-|---------|---------|-------------|
-| Bootstrap | 5.3.8 | CSS framework for layout and styling |
+| Library | Version | Loaded Via | Description |
+|---------|---------|------------|-------------|
+| Bootstrap | 5.3.8 | `<link>` tag in `index.html` | CSS framework for layout and styling |
 
 ---
 
