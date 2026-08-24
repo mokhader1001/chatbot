@@ -1,6 +1,38 @@
-# Bile Initiative Bot
+# Bile Initiative Bot — Documentation Guidelines
 
 A full-stack chatbot built with React and Node.js, powered by the Gemini API. It helps students learn about programming, ICT, software development, and the Bile Initiative programme.
+
+---
+
+## Libraries & Dependencies
+
+### Server Libraries
+
+| Library | Version | Description |
+|---------|---------|-------------|
+| `express` | 5.2.1 | Web framework for building the REST API |
+| `@google/genai` | 2.18.0 | Google Gemini AI SDK for generating chat responses |
+| `cors` | 2.8.6 | Enables Cross-Origin requests between client and server |
+| `dotenv` | 17.4.2 | Loads environment variables from `.env` file |
+| `nodemon` | 3.1.14 | (dev) Auto-restarts server on file changes |
+
+### Client Libraries
+
+| Library | Version | Description |
+|---------|---------|-------------|
+| `react` | 19.2.8 | UI library for building the chat interface |
+| `react-dom` | 19.2.8 | React rendering for the browser |
+| `vite` | 8.2.0 | (dev) Fast build tool and dev server |
+| `@vitejs/plugin-react` | 6.0.4 | (dev) React support for Vite |
+| `eslint` | 10.8.0 | (dev) Code linting |
+| `eslint-plugin-react-hooks` | 7.1.1 | (dev) Linting rules for React hooks |
+| `eslint-plugin-react-refresh` | 0.5.3 | (dev) Linting rules for React Fast Refresh |
+
+### CDN (loaded via `index.html`)
+
+| Library | Version | Description |
+|---------|---------|-------------|
+| Bootstrap | 5.3.8 | CSS framework for layout and styling |
 
 ---
 
@@ -32,7 +64,7 @@ chatbot/
 ## How It Works
 
 1. The **client** (React) sends the user's message to the **server** via a POST request to `/api/chat`.
-2. The **server** (Express) receives the message and forwards it to the **Gemini API** with a system prompt that defines the bot's personality and topic scope.
+2. The **server** (Express) receives the message and forwards it to the **Gemini API** using the `@google/genai` SDK with a system prompt that defines the bot's personality and topic scope.
 3. Gemini generates a response, the server sends it back to the client, and the client displays it in the chat window.
 
 ---
@@ -58,10 +90,14 @@ cd chatbot
 
 ### 2. Setup the server
 
+Install server dependencies:
+
 ```bash
 cd server
 npm install
 ```
+
+This installs `express`, `@google/genai`, `cors`, `dotenv`, and `nodemon`.
 
 Create a `.env` file inside the `server/` folder:
 
@@ -73,10 +109,14 @@ Replace `your_api_key_here` with the API key you got from Google AI Studio.
 
 ### 3. Setup the client
 
+Install client dependencies:
+
 ```bash
 cd ../client
 npm install
 ```
+
+This installs `react`, `react-dom`, `vite`, and the dev tooling (ESLint, plugins).
 
 ### 4. Run the project
 
@@ -106,6 +146,7 @@ Open `http://localhost:5173` in your browser to use the chatbot.
 
 ## Technologies Used
 
-- **Frontend:** React 19, Vite, Bootstrap 5
+- **Frontend:** React 19, Vite 8, Bootstrap 5
 - **Backend:** Node.js, Express 5
-- **API:** Google Gemini (gemini-3.5-flash-lite)
+- **AI:** Google Gemini API (`@google/genai` SDK, model: gemini-3.5-flash-lite)
+- **Tooling:** ESLint, Nodemon
